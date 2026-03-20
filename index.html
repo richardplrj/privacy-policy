@@ -1,197 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | MyDay Astro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* MyDay Astro theme – matches app (ivory, indigo, gold, purple) */
-        :root {
-            --ivory: #FAF8F3;
-            --warm-text: #2D2520;
-            --subtle-text: #6B6360;
-            --indigo: #3D4E73;
-            --deep-purple: #6B5B95;
-            --cosmic-purple: #4A3F6B;
-            --gold: #C9A86A;
-            --gold-30: rgba(201, 168, 106, 0.3);
-            --saffron: #D4956C;
-            --white: #FFFFFF;
-            --card-bg: #FFFBF6;
-            --border: rgba(26, 35, 126, 0.08);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--warm-text);
-            margin: 0;
-            padding: 0;
-            background: var(--ivory);
-            min-height: 100vh;
-        }
-
-        .page {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px 64px;
-        }
-
-        .container {
-            background: var(--card-bg);
-            padding: 48px 40px;
-            border-radius: 20px;
-            border: 1px solid var(--gold-30);
-            box-shadow: 0 4px 24px rgba(61, 78, 115, 0.06);
-        }
-
-        .logo-heading {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--indigo);
-            margin: 0 0 8px 0;
-            letter-spacing: -0.02em;
-            line-height: 1.3;
-        }
-
-        .date {
-            color: var(--subtle-text);
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 32px;
-        }
-
-        .intro {
-            font-size: 1.05rem;
-            color: var(--warm-text);
-            margin-bottom: 36px;
-        }
-
-        .intro strong {
-            color: var(--indigo);
-        }
-
-        h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--indigo);
-            margin: 36px 0 14px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--gold-30);
-            letter-spacing: -0.01em;
-        }
-
-        h2:first-of-type {
-            margin-top: 0;
-        }
-
-        p {
-            margin: 0 0 16px 0;
-            color: var(--warm-text);
-            font-size: 0.98rem;
-        }
-
-        ul {
-            margin: 0 0 20px 0;
-            padding-left: 1.35rem;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: var(--warm-text);
-        }
-
-        li strong {
-            color: var(--indigo);
-        }
-
-        .contact {
-            background: linear-gradient(135deg, rgba(61, 78, 115, 0.06) 0%, rgba(107, 91, 149, 0.06) 100%);
-            padding: 24px 28px;
-            border-radius: 16px;
-            border-left: 4px solid var(--gold);
-            margin-top: 40px;
-        }
-
-        .contact strong {
-            color: var(--indigo);
-            font-size: 0.95rem;
-        }
-
-        .contact a {
-            color: var(--deep-purple);
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .page {
-                padding: 28px 16px 48px;
-            }
-            .container {
-                padding: 32px 24px;
-                border-radius: 16px;
-            }
-            .logo-heading {
-                font-size: 1.65rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practicals</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:#1a1a1a;min-height:100vh}
+main{max-width:720px;margin:0 auto;padding:48px 24px 80px 24px}
+.page{display:none}.page.active{display:block}
+.idx-table{width:100%;border-collapse:collapse}
+.idx-table tr{cursor:pointer;transition:background 0.12s}
+.idx-table tr:hover{background:#f7f7f8}
+.idx-table td{padding:12px 14px;border-bottom:1px solid #e2e2e5;font-size:14px;vertical-align:top}
+.idx-table .num{width:36px;font-weight:600;color:#1a1a1a}
+.idx-table .sub{display:block;color:#6b6b6b;font-size:13px;margin-top:4px}
+.idx-table .sub-note{display:inline;color:#999;font-size:12px;font-style:italic}
+.back-btn{display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#6b6b6b;background:none;border:none;cursor:pointer;padding:0;margin-bottom:28px;transition:color 0.15s}
+.back-btn:hover{color:#1a1a1a}
+.practical-title{font-size:20px;font-weight:700;margin-bottom:6px}
+.practical-aim{font-size:14px;color:#6b6b6b;margin-bottom:28px;line-height:1.6}
+.practical-aim strong{color:#1a1a1a;font-weight:600}
+.section-label{font-size:14px;font-weight:600;margin:28px 0 12px 0}
+.code-block{background:#f4f4f6;border:1px solid #e2e2e5;border-radius:8px;margin-bottom:24px;overflow:hidden}
+.code-header{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1px solid #e2e2e5}
+.code-lang{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:#6b6b6b;text-transform:uppercase;letter-spacing:0.4px}
+.copy-btn{display:flex;align-items:center;gap:5px;padding:4px 10px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#6b6b6b;background:#fff;border:1px solid #e2e2e5;border-radius:5px;cursor:pointer;transition:all 0.15s}
+.copy-btn:hover{color:#1a1a1a;border-color:#999}
+.copy-btn.copied{color:#16a34a;border-color:#16a34a}
+.copy-btn svg{width:13px;height:13px}
+.code-content{padding:16px 18px;overflow-x:auto}
+.prereq{background:#f9f9f9;border:1px solid #e2e2e5;border-radius:6px;padding:14px 16px;margin-bottom:24px;font-size:13px;line-height:1.8}
+.prereq strong{font-weight:600}
+.prereq code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#eee;padding:2px 6px;border-radius:3px}
+.pip-box{display:flex;align-items:center;justify-content:space-between;margin-top:8px;background:#1a1a1a;border-radius:5px;overflow:hidden}
+.pip-box code{background:none;color:#e0e0e0;padding:8px 12px;font-family:'JetBrains Mono',monospace;font-size:12px;flex:1}
+.pip-copy{padding:6px 12px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:#999;background:#2a2a2a;border:none;border-left:1px solid #333;cursor:pointer;transition:color 0.15s;display:flex;align-items:center;gap:4px}
+.pip-copy:hover{color:#fff}
+.pip-copy.copied{color:#5ae07c}
+.pip-copy svg{width:12px;height:12px}
+.input-guide{background:#f9f9f9;border:1px solid #e2e2e5;border-radius:6px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.9}
+.input-guide strong{font-weight:600}
+.input-guide .prompt{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;color:#1a1a1a}
+.input-guide .prompt span{color:#6b6b6b}
+.input-guide .note{display:block;margin-top:8px;color:#6b6b6b;font-size:12px;font-style:italic}
+.accordion{border:1px solid #e2e2e5;border-radius:6px;margin-bottom:24px;overflow:hidden}
+.accordion-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1a1a1a;background:#f9f9f9;border:none;cursor:pointer;transition:background 0.12s}
+.accordion-btn:hover{background:#f0f0f2}
+.accordion-btn .arrow{font-size:11px;color:#999;transition:transform 0.2s}
+.accordion-btn.open .arrow{transform:rotate(180deg)}
+.accordion-body{display:none;padding:16px;font-size:13px;line-height:1.85;color:#333;border-top:1px solid #e2e2e5}
+.accordion-body.open{display:block}
+.accordion-body p{margin-bottom:12px}
+.accordion-body p:last-child{margin-bottom:0}
+.accordion-body b{color:#1a1a1a}
+.code-content pre{font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.7;color:#2a2a2a;white-space:pre;margin:0}
+@media(max-width:600px){main{padding:32px 16px 60px 16px}.code-content pre{font-size:12px}}
+</style>
 </head>
 <body>
-    <div class="page">
-        <div class="container">
-            <h1 class="logo-heading">Privacy Policy for MyDay Astro</h1>
-            <p class="date">Last Updated: March 2, 2026</p>
+<main>
 
-            <p class="intro">At <strong>MyDay Astro</strong>, we are committed to providing you with accurate astrological insights while protecting your personal data. This policy explains what we collect and how we use it.</p>
+<div class="page active" id="index">
+<table class="idx-table">
+<tr data-goto="p1"><td class="num">1</td><td>Performing matrix multiplication and finding eigen vectors and eigen values using tensorflow<span class="sub">1a.) Write a python program that creates a tensorflow operation to perform matrix multiplication between two tensors</span><span class="sub">1b.) Tensorflow Matrix multiplication with user input</span><span class="sub">1c.) Eigen Values and Eigen Vectors using Tensorflow</span></td></tr>
+<tr data-goto="p2"><td class="num">2</td><td>Implementing a deep neural network for performing binary classification task</td></tr>
+<tr data-goto="p3"><td class="num">3</td><td>Solving XOR problem using Deep feed forward network(DFFN)</td></tr>
+<tr data-goto="p4"><td class="num">4</td><td>Implementing regularization to avoid overfitting in binary classification code</td></tr>
+<tr data-goto="p5"><td class="num">5</td><td>Using a deep feed forward network with two hidden layers for performing linear regression and predicting values</td></tr>
+<tr data-goto="p6"><td class="num">6</td><td>Evaluating Feed Forward Deep Network for Multiclass Classification using KFold Cross-Validation</td></tr>
+<tr data-goto="p7"><td class="num">7</td><td>Implementation of convolutional neural network to predict numbers from number images</td></tr>
+<tr data-goto="p8"><td class="num">8</td><td>Demonstrate recurrent neural network that learns to perform sequence analysis for stock price</td></tr>
+</table>
+</div>
 
-            <h2>1. Information We Collect</h2>
-            <p>To generate your astrology charts and manage your account, we collect the following:</p>
-            <ul>
-                <li><strong>Google Authentication:</strong> We use Google Sign-In for secure access. We only collect your name and email address. <strong>We do not access or collect your Google profile picture.</strong></li>
-                <li><strong>Astrological Data:</strong> To create your personalized charts, we ask you to provide your <strong>Date of Birth, Time of Birth, and Place of Birth</strong>. This data is essential for the app's core functionality.</li>
-                <li><strong>Feedback Data:</strong> If you use our optional "Feedback via WhatsApp" feature, we receive your phone number and message content voluntarily.</li>
-            </ul>
+<div class="page" id="p1">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 1</h2>
+<p class="practical-aim"><strong>Aim:</strong> Performing matrix multiplication and finding eigen vectors and eigen values using tensorflow</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code><br>
+<strong>Dataset:</strong> No dataset required — values are hardcoded in the code
+<div class="pip-box"><code>pip install tensorflow numpy</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> This practical is just basic math using TensorFlow. You are multiplying two matrices together and finding eigenvalues/eigenvectors. Think of it as using TensorFlow as a fancy calculator.</p>
+<p><b>What is TensorFlow?</b> TensorFlow is a library made by Google. It is mainly used for machine learning and deep learning, but here we are just using it to do matrix math. You need to install it before running the code.</p>
+<p><b>What is a tensor?</b> A tensor is just a fancy name for an array of numbers. A 2D tensor is basically a matrix (rows and columns of numbers). When we write <code>tf.constant([[1,2],[3,4]])</code>, we are creating a 2x2 matrix.</p>
+<p><b>What is matrix multiplication?</b> It is a way of multiplying two matrices together using a specific rule — you multiply rows of the first matrix with columns of the second matrix and add them up. The function <code>tf.matmul()</code> does this for us automatically.</p>
+<p><b>What are eigenvalues and eigenvectors?</b> These are special numbers and directions associated with a square matrix. They are used a lot in physics, engineering, and data science (like PCA for dimensionality reduction). The function <code>tf.linalg.eig()</code> calculates both for us. You just give it a square matrix and it returns the results.</p>
+<p><b>What does .numpy() do?</b> TensorFlow stores numbers in its own format (tensors). The <code>.numpy()</code> converts them into regular Python numbers so we can print them nicely.</p>
+</div>
+</div>
+<div class="section-label">1a.) Write a python program that creates a tensorflow operation to perform matrix multiplication between two tensors</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import tensorflow as tf
 
-            <h2>2. Device Permissions</h2>
-            <p><strong>Notifications:</strong> Our app may send you notifications (for example, your daily insight and an optional evening prompt). Upon first use, we will ask for your explicit permission to send these. You can opt out at any time through your device settings.</p>
+tensor_a = tf.constant([[1, 2], [3, 4]], dtype=tf.float32)
+tensor_b = tf.constant([[5, 6], [7, 8]], dtype=tf.float32)
 
-            <h2>3. Data Storage and Security</h2>
-            <p><strong>Firebase Database:</strong> All your astrological data and profile information are stored securely in <strong>Google Firebase</strong>. This ensures your data is saved if you switch devices. We use industry-standard encryption provided by Firebase to ensure your data is safe.</p>
+print("Original Matrices:")
+print(tensor_a.numpy())
+print(tensor_b.numpy())
 
-            <h2>4. Third-Party Services</h2>
-            <p>We integrate with the following services:</p>
-            <ul>
-                <li>Google Play Services (Core functionality)</li>
-                <li>Google Sign-In (Authentication)</li>
-                <li>Firebase (Database and Performance)</li>
-                <li>WhatsApp (Optional user-initiated support)</li>
-            </ul>
+result = tf.matmul(tensor_a, tensor_b)
 
-            <h2>5. Data Retention and Deletion</h2>
-            <p>You can update or delete your birth details at any time within the app. You can permanently delete your account and all associated data at any time using the <strong>Delete account</strong> option in the app (Settings).</p>
-            <p>If you cannot use the app but still want to delete your account, you can submit a request using our request form. You must use the same email address that you use to sign in to the app. Open the form here: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpoTW20CZkLQNFdXTvb9qmzJm8AGpeTASes3PiFQHbYiKtNg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">MyDay Astro – Account and Data Deletion Request</a>.</p>
-            <p>For any other assistance, contact us at the address below.</p>
+print("\nMatrix Multiplication Result:")
+print(result.numpy())</pre></div></div>
+<div class="section-label">1b.) Tensorflow Matrix multiplication with user input</div>
+<div class="input-guide">
+<strong>Sample Input — type these values one by one when prompted:</strong>
+<span class="prompt"><span>Enter number of rows for Matrix A:</span> 2</span>
+<span class="prompt"><span>Enter number of columns for Matrix A:</span> 3</span>
+<span class="prompt"><span>Enter number of rows for Matrix B:</span> 3</span>
+<span class="prompt"><span>Enter number of columns for Matrix B:</span> 2</span>
+<span class="prompt"><span>Enter row 1 (Matrix A):</span> 3 5 7</span>
+<span class="prompt"><span>Enter row 2 (Matrix A):</span> 3 1 2</span>
+<span class="prompt"><span>Enter row 1 (Matrix B):</span> 9 7</span>
+<span class="prompt"><span>Enter row 2 (Matrix B):</span> 4 5</span>
+<span class="prompt"><span>Enter row 3 (Matrix B):</span> 5 1</span>
+<span class="note">Rule: Columns of Matrix A must equal Rows of Matrix B (here 3 = 3, so it works). Numbers are separated by spaces, not commas.</span>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import tensorflow as tf
 
-            <div class="contact">
-                <strong>Contact Us</strong><br>
-                Email: <a href="mailto:mydayastro@gmail.com">mydayastro@gmail.com</a>
-            </div>
-        </div>
-    </div>
+def get_matrix_input(rows, cols, name):
+    print(f"\nEnter elements for {name} matrix:")
+    matrix = []
+    for i in range(rows):
+        row = list(map(float, input(f"Enter row {i + 1} (space separated): ").split()))
+        if len(row) != cols:
+            raise ValueError("Number of elements does not match the given columns")
+        matrix.append(row)
+    return matrix
+
+rows_a = int(input("Enter number of rows for Matrix A: "))
+cols_a = int(input("Enter number of columns for Matrix A: "))
+rows_b = int(input("Enter number of rows for Matrix B: "))
+cols_b = int(input("Enter number of columns for Matrix B: "))
+
+if cols_a != rows_b:
+    print("\nMatrix multiplication not possible!")
+    print("Columns of Matrix A must equal rows of Matrix B")
+else:
+    matrix_a = get_matrix_input(rows_a, cols_a, "Matrix A")
+    matrix_b = get_matrix_input(rows_b, cols_b, "Matrix B")
+
+    tensor_a = tf.constant(matrix_a, dtype=tf.float32)
+    tensor_b = tf.constant(matrix_b, dtype=tf.float32)
+
+    print("\nMatrix A:")
+    print(tensor_a.numpy())
+    print("\nMatrix B:")
+    print(tensor_b.numpy())
+
+    result = tf.matmul(tensor_a, tensor_b)
+
+    print("\nMatrix Multiplication Result:")
+    print(result.numpy())</pre></div></div>
+<div class="section-label">1c.) Eigen Values and Eigen Vectors using Tensorflow</div>
+<div class="input-guide">
+<strong>Sample Input — type these values one by one when prompted:</strong>
+<span class="prompt"><span>Enter the dimension of the square matrix (n x n):</span> 3</span>
+<span class="prompt"><span>Enter row 1:</span> 2 3 5</span>
+<span class="prompt"><span>Enter row 2:</span> 7 8 6</span>
+<span class="prompt"><span>Enter row 3:</span> 3 2 1</span>
+<span class="note">Must be a square matrix — rows and columns are the same. If you enter 3, each row must have exactly 3 numbers separated by spaces.</span>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import tensorflow as tf
+
+def get_square_matrix_input(size):
+    print("\nEnter matrix elements row-wise:")
+    matrix = []
+    for i in range(size):
+        row = list(map(float, input(f"Enter row {i + 1} (space separated): ").split()))
+        if len(row) != size:
+            raise ValueError(f"Each row must have exactly {size} elements")
+        matrix.append(row)
+    return matrix
+
+matrix_size = int(input("Enter the dimension of the square matrix (n x n): "))
+
+matrix_data = get_square_matrix_input(matrix_size)
+tensor_matrix = tf.constant(matrix_data, dtype=tf.float32)
+
+print("\nInput Matrix:")
+print(tensor_matrix.numpy())
+
+eigen_values, eigen_vectors = tf.linalg.eig(tensor_matrix)
+
+print("\nEigen Values:")
+print(eigen_values.numpy())
+
+print("\nEigen Vectors:")
+print(eigen_vectors.numpy())</pre></div></div>
+</div>
+
+<div class="page" id="p2">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 2</h2>
+<p class="practical-aim"><strong>Aim:</strong> Implementing a deep neural network for performing binary classification task</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>matplotlib</code>, <code>pandas</code>, <code>seaborn</code>, <code>scikit-learn</code><br>
+<strong>Dataset:</strong> Breast Cancer Wisconsin — built-in with scikit-learn, no download needed
+<div class="pip-box"><code>pip install tensorflow numpy matplotlib pandas seaborn scikit-learn</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy matplotlib pandas seaborn scikit-learn')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> We are building a small brain (neural network) that looks at medical data about tumors and predicts whether a tumor is cancerous (malignant) or not cancerous (benign). This is called binary classification because there are only 2 possible answers.</p>
+<p><b>What is the Breast Cancer dataset?</b> It is a famous medical dataset with 569 patient records. Each record has 30 measurements about a tumor (like size, texture, smoothness). The answer for each record is either 0 (malignant/cancerous) or 1 (benign/not cancerous). It comes built-in with scikit-learn.</p>
+<p><b>What does each library do?</b></p>
+<p><b>numpy</b> — handles arrays and number operations. <b>matplotlib</b> — draws graphs (accuracy curve, loss curve). <b>pandas</b> — works with data tables. <b>seaborn</b> — makes the confusion matrix heatmap look pretty. <b>scikit-learn</b> — provides the dataset, splits data into train/test, scales numbers, and gives us evaluation tools. <b>tensorflow/keras</b> — builds and trains the neural network.</p>
+<p><b>What does the code do step by step?</b></p>
+<p>1. Loads the breast cancer data and splits it — 80% for training, 20% for testing.</p>
+<p>2. Scales the features using StandardScaler — this makes all numbers fall in a similar range so the network learns better.</p>
+<p>3. Builds a neural network with 3 layers — first layer has 16 neurons, second has 8, last has 1 (which gives the final yes/no answer). The last layer uses sigmoid which squeezes the output between 0 and 1.</p>
+<p>4. Trains the model for 30 rounds (epochs). Each round, the model looks at the training data and improves its predictions.</p>
+<p>5. Shows accuracy and loss graphs — accuracy should go up, loss should go down.</p>
+<p>6. Tests the model on data it has never seen before and prints accuracy (should be around 97-98%).</p>
+<p>7. Shows a confusion matrix — a 2x2 grid showing how many it got right and wrong for each class.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import confusion_matrix, classification_report
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+dataset = load_breast_cancer()
+features = dataset.data
+labels = dataset.target
+
+print("Target classes:", dataset.target_names)
+print("Unique labels:", np.unique(labels))
+
+features_train, features_test, labels_train, labels_test = train_test_split(
+    features, labels, test_size=0.2, random_state=42
+)
+
+scaler = StandardScaler()
+features_train = scaler.fit_transform(features_train)
+features_test = scaler.transform(features_test)
+
+model = Sequential([
+    Dense(16, activation='relu', input_shape=(features_train.shape[1],)),
+    Dense(8, activation='relu'),
+    Dense(1, activation='sigmoid')
+])
+
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+
+training_history = model.fit(
+    features_train, labels_train,
+    epochs=30,
+    batch_size=32,
+    validation_split=0.2
+)
+
+plt.plot(training_history.history['accuracy'], label='Train')
+plt.plot(training_history.history['val_accuracy'], label='Validation')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.title('Accuracy Curve')
+plt.legend()
+plt.show()
+
+plt.plot(training_history.history['loss'], label='Train')
+plt.plot(training_history.history['val_loss'], label='Validation')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.title('Loss Curve')
+plt.legend()
+plt.show()
+
+test_loss, test_accuracy = model.evaluate(features_test, labels_test)
+print("Test Accuracy:", test_accuracy)
+
+predicted_labels = (model.predict(features_test) > 0.5).astype("int32")
+
+conf_matrix = confusion_matrix(labels_test, predicted_labels)
+sns.heatmap(conf_matrix, annot=True, fmt='d',
+            xticklabels=['Malignant', 'Benign'],
+            yticklabels=['Malignant', 'Benign'])
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.show()
+
+print("\nClassification Report:")
+print(classification_report(labels_test, predicted_labels))</pre></div></div>
+</div>
+
+<div class="page" id="p3">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 3</h2>
+<p class="practical-aim"><strong>Aim:</strong> Solving XOR problem using Deep feed forward network(DFFN)</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>matplotlib</code><br>
+<strong>Dataset:</strong> No dataset required — XOR values are hardcoded in the code
+<div class="pip-box"><code>pip install tensorflow numpy matplotlib</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy matplotlib')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> XOR is a logical operation. It gives 1 when the two inputs are different, and 0 when they are the same. (0,0)→0, (0,1)→1, (1,0)→1, (1,1)→0. A single neuron cannot solve this problem because the data is not linearly separable (you cannot draw a single straight line to separate the 0s from the 1s). So we need a network with a hidden layer.</p>
+<p><b>Why is this important?</b> XOR is the classic proof that deep networks are more powerful than single neurons. It is one of the most famous problems in neural network history. If your network can solve XOR, it means it can learn non-linear patterns.</p>
+<p><b>What does the code do?</b></p>
+<p>1. Creates the XOR data — 4 input combinations and their expected outputs, hardcoded directly in the code.</p>
+<p>2. Builds a small network — first layer has 8 neurons with ReLU activation, output layer has 1 neuron with sigmoid (gives a value between 0 and 1).</p>
+<p>3. Trains for 500 epochs silently (verbose=0 means no training output shown).</p>
+<p>4. Creates a grid of thousands of points and predicts each one to draw a decision boundary — the colored regions show where the network predicts 0 (blue) and 1 (red).</p>
+<p>5. Plots the 4 XOR data points on top of this boundary to show the network learned correctly.</p>
+<p><b>Note:</b> Sometimes due to random weight initialization the network might not learn properly. If the plot looks wrong (all one color), just run the cell again.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+input_data = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
+output_labels = np.array([[0], [1], [1], [0]])
+
+model = Sequential([
+    Dense(8, activation='relu', input_shape=(2,)),
+    Dense(1, activation='sigmoid')
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(input_data, output_labels, epochs=500, verbose=0)
+
+grid_x, grid_y = np.meshgrid(
+    np.linspace(-0.2, 1.2, 200),
+    np.linspace(-0.2, 1.2, 200)
+)
+grid_points = np.c_[grid_x.ravel(), grid_y.ravel()]
+
+predictions = model.predict(grid_points)
+decision_map = predictions.reshape(grid_x.shape)
+
+plt.figure(figsize=(6, 6))
+plt.contourf(grid_x, grid_y, decision_map, levels=[0, 0.5, 1], cmap='coolwarm', alpha=0.6)
+
+for i, point in enumerate(input_data):
+    if output_labels[i] == 0:
+        plt.scatter(point[0], point[1], color='blue', edgecolors='k', s=100,
+                    label='Class 0' if i == 0 else "")
+    else:
+        plt.scatter(point[0], point[1], color='red', edgecolors='k', s=100,
+                    label='Class 1' if i == 1 else "")
+
+plt.title("XOR Decision Boundary")
+plt.xlabel("Input 1")
+plt.ylabel("Input 2")
+plt.legend()
+plt.show()</pre></div></div>
+</div>
+
+<div class="page" id="p4">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 4</h2>
+<p class="practical-aim"><strong>Aim:</strong> Implementing regularization to avoid overfitting in binary classification code</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>matplotlib</code>, <code>scikit-learn</code><br>
+<strong>Dataset:</strong> Breast Cancer Wisconsin — built-in with scikit-learn, no download needed
+<div class="pip-box"><code>pip install tensorflow numpy matplotlib scikit-learn</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy matplotlib scikit-learn')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> This practical shows what happens when a neural network memorizes the training data too well (overfitting) and how to prevent it using regularization. We build two models on the same breast cancer data — one without any protection and one with L2 regularization and Dropout — then compare them.</p>
+<p><b>What is overfitting?</b> Imagine a student who memorizes the textbook word by word but cannot answer new questions. That is overfitting. The model performs amazingly on training data but poorly on new/unseen data.</p>
+<p><b>What is L2 regularization?</b> It adds a penalty to the model when its internal weights become too large. This forces the model to keep weights small and simple, preventing it from memorizing the data. The <code>kernel_regularizer=l2(0.01)</code> means we add a small penalty of 0.01 times the squared weights.</p>
+<p><b>What is Dropout?</b> During training, Dropout randomly turns off some neurons (sets them to zero). <code>Dropout(0.5)</code> means 50% of neurons are randomly switched off in each training step. This forces the remaining neurons to not rely too heavily on any single neuron, making the model more robust.</p>
+<p><b>What does the code do?</b></p>
+<p>1. Loads breast cancer data and splits into train/test (same as Practical 2).</p>
+<p>2. Builds Model 1 — a normal network with no protection (64 neurons, then 32, then 1).</p>
+<p>3. Builds Model 2 — same structure but with L2 regularization on the weight layers and Dropout(0.5) after each hidden layer.</p>
+<p>4. Trains both for 50 epochs and plots their validation accuracy side by side.</p>
+<p>5. Prints test accuracy for both models so you can compare which generalizes better.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.regularizers import l2
+
+dataset = load_breast_cancer()
+features = dataset.data
+labels = dataset.target
+
+features_train, features_test, labels_train, labels_test = train_test_split(
+    features, labels, test_size=0.2, random_state=42
+)
+
+scaler = StandardScaler()
+features_train = scaler.fit_transform(features_train)
+features_test = scaler.transform(features_test)
+
+model_no_reg = Sequential([
+    Dense(64, activation='relu', input_shape=(features_train.shape[1],)),
+    Dense(32, activation='relu'),
+    Dense(1, activation='sigmoid')
+])
+
+model_no_reg.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+history_no_reg = model_no_reg.fit(
+    features_train, labels_train, epochs=50, validation_split=0.2, verbose=0
+)
+
+model_with_reg = Sequential([
+    Dense(64, activation='relu', kernel_regularizer=l2(0.01),
+          input_shape=(features_train.shape[1],)),
+    Dropout(0.5),
+    Dense(32, activation='relu', kernel_regularizer=l2(0.01)),
+    Dropout(0.5),
+    Dense(1, activation='sigmoid')
+])
+
+model_with_reg.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+history_with_reg = model_with_reg.fit(
+    features_train, labels_train, epochs=50, validation_split=0.2, verbose=0
+)
+
+plt.figure(figsize=(8, 5))
+plt.plot(history_no_reg.history['val_accuracy'], label='Without Regularization')
+plt.plot(history_with_reg.history['val_accuracy'], label='With L2 + Dropout')
+plt.title("Validation Accuracy Comparison")
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.show()
+
+loss_no_reg, accuracy_no_reg = model_no_reg.evaluate(features_test, labels_test, verbose=0)
+loss_with_reg, accuracy_with_reg = model_with_reg.evaluate(features_test, labels_test, verbose=0)
+
+print("Test Accuracy Without Regularization:", accuracy_no_reg)
+print("Test Accuracy With L2 + Dropout:", accuracy_with_reg)</pre></div></div>
+</div>
+
+<div class="page" id="p5">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 5</h2>
+<p class="practical-aim"><strong>Aim:</strong> Using a deep feed forward network with two hidden layers for performing linear regression and predicting values</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>matplotlib</code>, <code>scikit-learn</code><br>
+<strong>Dataset:</strong> California Housing — auto-downloads from internet on first run, cached after that
+<div class="pip-box"><code>pip install tensorflow numpy matplotlib scikit-learn</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy matplotlib scikit-learn')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> Instead of classifying into categories (like Practical 2), here we are predicting a number — the price of a house. This is called regression. We build a feed forward network with two hidden layers to predict California house prices.</p>
+<p><b>What is the California Housing dataset?</b> It contains 20,640 records of houses in California from the 1990 census. Each record has 8 features like median income of the area, house age, number of rooms, location (latitude/longitude), etc. The target value is the median house price in that area (in $100,000s).</p>
+<p><b>What is linear regression with a neural network?</b> Traditional linear regression draws a straight line through data. A neural network with hidden layers can learn curved/complex patterns. The last layer has just 1 neuron with no activation function (linear output) — it directly outputs the predicted price.</p>
+<p><b>What does each library do here?</b></p>
+<p><b>fetch_california_housing</b> — downloads the housing data (first time only, then cached). <b>StandardScaler</b> — scales all features to have mean=0 and standard deviation=1 (important because features like income and latitude have very different ranges). <b>r2_score</b> — measures how good predictions are (1.0 = perfect, 0.0 = useless).</p>
+<p><b>What does the code do?</b></p>
+<p>1. Downloads and loads the housing data, splits it 80/20.</p>
+<p>2. Scales features so the network can learn properly.</p>
+<p>3. Builds a network: 64 neurons → 32 neurons → 1 output neuron.</p>
+<p>4. Trains for 50 epochs using mean squared error as the loss (measures how far off predictions are from real prices).</p>
+<p>5. Evaluates on test data, shows MSE, MAE, R2 score, and a training/validation loss graph.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from sklearn.datasets import fetch_california_housing
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error, r2_score
+
+print("Loading California Housing Dataset...")
+housing_data = fetch_california_housing()
+features = housing_data.data
+target_values = housing_data.target
+
+print("Dataset Loaded Successfully!")
+print("Shape of Features:", features.shape)
+print("Shape of Target:", target_values.shape)
+
+features_train, features_test, target_train, target_test = train_test_split(
+    features, target_values, test_size=0.2, random_state=42
+)
+
+scaler = StandardScaler()
+features_train = scaler.fit_transform(features_train)
+features_test = scaler.transform(features_test)
+
+model = keras.Sequential([
+    layers.Dense(64, activation='relu', input_shape=(features_train.shape[1],)),
+    layers.Dense(32, activation='relu'),
+    layers.Dense(1)
+])
+
+model.compile(
+    optimizer='adam',
+    loss='mean_squared_error',
+    metrics=['mae']
+)
+
+print("\nModel Summary:")
+model.summary()
+
+print("\nTraining Model...\n")
+training_history = model.fit(
+    features_train, target_train,
+    epochs=50,
+    batch_size=32,
+    validation_split=0.2,
+    verbose=1
+)
+
+print("\nEvaluating Model...\n")
+test_loss, test_mae = model.evaluate(features_test, target_test)
+print("Test Mean Squared Error (MSE):", test_loss)
+print("Test Mean Absolute Error (MAE):", test_mae)
+
+predicted_values = model.predict(features_test)
+print("\nFirst 5 Predicted Values:")
+print(predicted_values[:5].flatten())
+print("\nFirst 5 Actual Values:")
+print(target_test[:5])
+
+r2 = r2_score(target_test, predicted_values)
+print("\nR2 Score:", r2)
+
+plt.figure()
+plt.plot(training_history.history['loss'], label="Train Loss")
+plt.plot(training_history.history['val_loss'], label="Validation Loss")
+plt.title("Training and Validation Loss")
+plt.xlabel("Epochs")
+plt.ylabel("Loss")
+plt.legend()
+plt.show()</pre></div></div>
+</div>
+
+<div class="page" id="p6">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 6</h2>
+<p class="practical-aim"><strong>Aim:</strong> Evaluating Feed Forward Deep Network for Multiclass Classification using KFold Cross-Validation</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>scikit-learn</code><br>
+<strong>Dataset:</strong> Iris — built-in with scikit-learn, no download needed
+<div class="pip-box"><code>pip install tensorflow numpy matplotlib seaborn scikit-learn</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy matplotlib seaborn scikit-learn')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> This is multiclass classification — instead of just 2 categories (like malignant/benign), we are classifying flowers into 3 species: Setosa, Versicolor, and Virginica. We also use KFold Cross-Validation to make sure our results are reliable.</p>
+<p><b>What is the Iris dataset?</b> One of the most famous datasets in machine learning. It has 150 flower records with 4 features each: sepal length, sepal width, petal length, and petal width. Each flower belongs to one of 3 species. It comes built-in with scikit-learn.</p>
+<p><b>What is KFold Cross-Validation?</b> Instead of splitting data into train/test once, KFold splits the data into K equal parts (here K=5). It trains 5 times — each time using a different part as test data and the remaining 4 parts for training. This gives 5 accuracy scores instead of 1, making the result much more reliable. If all 5 scores are high, the model is genuinely good (not just lucky with one split).</p>
+<p><b>What is one-hot encoding?</b> The 3 classes (0, 1, 2) are converted to vectors: 0→[1,0,0], 1→[0,1,0], 2→[0,0,1]. This is needed because the last layer uses softmax which outputs 3 probabilities.</p>
+<p><b>What is softmax?</b> The last layer activation. It takes 3 numbers and converts them into 3 probabilities that add up to 1. For example: [0.9, 0.05, 0.05] means 90% chance of class 0. The class with the highest probability is the prediction.</p>
+<p><b>What does the code do?</b></p>
+<p>1. Loads Iris data, one-hot encodes labels, scales features.</p>
+<p>2. Sets up 5-fold cross validation.</p>
+<p>3. For each fold: builds a new model (64→32→3 neurons), trains 50 epochs, predicts on the test fold, calculates accuracy.</p>
+<p>4. Prints accuracy for each fold and the average accuracy across all 5 folds.</p>
+<p>5. Shows a confusion matrix from the last fold — a 3x3 grid showing predictions vs actual classes.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from sklearn.datasets import load_iris
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, confusion_matrix
+from tensorflow.keras.utils import to_categorical
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+print("Loading Iris Dataset...\n")
+iris_data = load_iris()
+features = iris_data.data
+labels = iris_data.target
+
+labels_encoded = to_categorical(labels)
+print("Dataset Shape:", features.shape)
+
+scaler = StandardScaler()
+features_scaled = scaler.fit_transform(features)
+
+num_folds = 5
+kfold = KFold(n_splits=num_folds, shuffle=True, random_state=42)
+fold_number = 1
+fold_accuracies = []
+
+for train_indices, test_indices in kfold.split(features_scaled):
+    print(f"\nTraining for Fold {fold_number}...\n")
+
+    features_train = features_scaled[train_indices]
+    features_test = features_scaled[test_indices]
+    labels_train = labels_encoded[train_indices]
+    labels_test = labels_encoded[test_indices]
+
+    model = keras.Sequential([
+        layers.Dense(64, activation='relu', input_shape=(features.shape[1],)),
+        layers.Dense(32, activation='relu'),
+        layers.Dense(3, activation='softmax')
+    ])
+
+    model.compile(
+        optimizer='adam',
+        loss='categorical_crossentropy',
+        metrics=['accuracy']
+    )
+
+    model.fit(features_train, labels_train, epochs=50, batch_size=16, verbose=0)
+
+    predicted_probabilities = model.predict(features_test)
+    predicted_classes = np.argmax(predicted_probabilities, axis=1)
+    true_classes = np.argmax(labels_test, axis=1)
+
+    fold_accuracy = accuracy_score(true_classes, predicted_classes)
+    print(f"Accuracy for Fold {fold_number}: {fold_accuracy:.4f}")
+
+    fold_accuracies.append(fold_accuracy)
+    fold_number += 1
+
+print("\nK-Fold Cross Validation Results:")
+for i in range(len(fold_accuracies)):
+    print(f"Fold {i + 1} Accuracy: {fold_accuracies[i]:.4f}")
+
+print("\nAverage Accuracy:", np.mean(fold_accuracies))
+
+conf_matrix = confusion_matrix(true_classes, predicted_classes)
+plt.figure()
+sns.heatmap(conf_matrix, annot=True, fmt='d')
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.title("Confusion Matrix")
+plt.show()</pre></div></div>
+</div>
+
+<div class="page" id="p7">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 7</h2>
+<p class="practical-aim"><strong>Aim:</strong> Implementation of convolutional neural network to predict numbers from number images</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>scikit-learn</code><br>
+<strong>Dataset:</strong> MNIST — auto-downloads from internet on first run, cached after that
+<div class="pip-box"><code>pip install tensorflow numpy matplotlib seaborn scikit-learn</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy matplotlib seaborn scikit-learn')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> We build a CNN (Convolutional Neural Network) that looks at images of handwritten digits (0-9) and predicts which digit it is. This is image classification — the network learns to "see" patterns in pictures.</p>
+<p><b>What is MNIST?</b> The most famous image dataset in deep learning. It contains 70,000 grayscale images of handwritten digits — 60,000 for training and 10,000 for testing. Each image is 28x28 pixels. It auto-downloads the first time you run the code.</p>
+<p><b>What is a CNN and why not use a regular network?</b> A regular neural network treats each pixel as an independent input — it does not understand that nearby pixels form shapes. A CNN uses small filters (like 3x3 grids) that slide across the image and detect patterns like edges, curves, and loops. This is much better for images because it preserves spatial relationships.</p>
+<p><b>What is Conv2D?</b> A convolutional layer. <code>Conv2D(32, (3,3))</code> means 32 different 3x3 filters scan across the image. Each filter learns to detect a different pattern (one might detect horizontal edges, another might detect curves).</p>
+<p><b>What is MaxPooling2D?</b> After convolution, the image still has many pixels. MaxPooling(2,2) shrinks the image by half — it takes each 2x2 block and keeps only the maximum value. This reduces computation and makes the network focus on the most important features.</p>
+<p><b>What does Flatten do?</b> After convolution and pooling, we have a 2D feature map. Flatten converts it into a 1D list of numbers so it can be fed into regular Dense layers for the final classification.</p>
+<p><b>Why divide by 255?</b> Pixel values range from 0 to 255. Dividing by 255 scales them to 0-1, which helps the network train faster and more stably.</p>
+<p><b>What does the code do?</b></p>
+<p>1. Loads MNIST data, normalizes pixels to 0-1 range, reshapes images to 28x28x1 (the 1 means grayscale/single channel).</p>
+<p>2. Builds a CNN: Conv2D(32 filters) → MaxPool → Conv2D(64 filters) → MaxPool → Flatten → Dense(64) → Dense(10 with softmax for 10 digit classes).</p>
+<p>3. Trains for just 5 epochs (enough for 99% accuracy on this dataset).</p>
+<p>4. Evaluates on 10,000 test images and shows a 10x10 confusion matrix.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+
+(train_images, train_labels), (test_images, test_labels) = keras.datasets.mnist.load_data()
+print("Training Data Shape:", train_images.shape)
+print("Testing Data Shape:", test_images.shape)
+
+train_images = train_images / 255.0
+test_images = test_images / 255.0
+train_images = train_images.reshape(-1, 28, 28, 1)
+test_images = test_images.reshape(-1, 28, 28, 1)
+
+model = keras.Sequential([
+    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    layers.MaxPooling2D((2, 2)),
+    layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.MaxPooling2D((2, 2)),
+    layers.Flatten(),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(10, activation='softmax')
+])
+
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+training_history = model.fit(
+    train_images, train_labels,
+    epochs=5,
+    batch_size=64,
+    validation_data=(test_images, test_labels)
+)
+
+test_loss, test_accuracy = model.evaluate(test_images, test_labels)
+print("\nTest Accuracy:", test_accuracy)
+
+predicted_probabilities = model.predict(test_images)
+predicted_classes = np.argmax(predicted_probabilities, axis=1)
+
+conf_matrix = confusion_matrix(test_labels, predicted_classes)
+plt.figure()
+sns.heatmap(conf_matrix, annot=True, fmt='d')
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.show()</pre></div></div>
+</div>
+
+<div class="page" id="p8">
+<button class="back-btn" onclick="switchPage('index')">&larr; Back</button>
+<h2 class="practical-title">Practical 8</h2>
+<p class="practical-aim"><strong>Aim:</strong> Demonstrate recurrent neural network that learns to perform sequence analysis for stock price</p>
+<div class="prereq">
+<strong>Prerequisites</strong><br>
+<strong>Libraries:</strong> <code>tensorflow</code>, <code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>scikit-learn</code>, <code>yfinance</code><br>
+<strong>Dataset:</strong> AAPL stock data from Yahoo Finance — requires internet every run
+<div class="pip-box"><code>pip install tensorflow numpy pandas matplotlib scikit-learn yfinance</code><button class="pip-copy" onclick="copyPip(this,'pip install tensorflow numpy pandas matplotlib scikit-learn yfinance')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div>
+</div>
+<div class="accordion">
+<button class="accordion-btn" onclick="toggleAccordion(this)">Detailed Explanation <span class="arrow">▼</span></button>
+<div class="accordion-body">
+<p><b>What this practical is about:</b> We build an LSTM (Long Short-Term Memory) network — a type of RNN (Recurrent Neural Network) — that looks at past stock prices and predicts future prices. Specifically, it looks at the last 30 days of Apple (AAPL) stock and predicts the next day's closing price.</p>
+<p><b>Why use an RNN/LSTM instead of a regular network?</b> Stock prices are sequential — today's price depends on yesterday's, which depends on the day before. A regular network treats each input independently and has no concept of order or time. An RNN processes data step by step and remembers previous steps. LSTM is an improved version of RNN that can remember patterns over longer sequences without forgetting.</p>
+<p><b>What is yfinance?</b> A Python library that downloads real stock market data from Yahoo Finance. It needs internet every time because it fetches live/historical data. You must install it separately with <code>pip install yfinance</code>.</p>
+<p><b>What is MinMaxScaler?</b> It scales all stock prices to a range between 0 and 1. For example if prices range from $120 to $190, the scaler converts $120→0, $190→1, and everything else in between. Neural networks work much better with small numbers.</p>
+<p><b>What are sequences/windows?</b> We create sliding windows of 30 days. So: days 1-30 → predict day 31, days 2-31 → predict day 32, and so on. The network learns the pattern of how prices move over 30-day windows.</p>
+<p><b>What does inverse_transform do?</b> After prediction, the values are still in 0-1 range. <code>inverse_transform</code> converts them back to actual dollar prices so the graph shows real numbers.</p>
+<p><b>What does the code do?</b></p>
+<p>1. Downloads 9 years of Apple stock data (2015-2024) using yfinance.</p>
+<p>2. Keeps only the closing price, scales it to 0-1.</p>
+<p>3. Creates 30-day sliding windows for training.</p>
+<p>4. Splits 80% for training, 20% for testing.</p>
+<p>5. Builds an LSTM network: LSTM(50 units, returns sequences) → LSTM(50 units) → Dense(1). Two LSTM layers stacked means the second layer learns higher-level patterns from the first layer's output.</p>
+<p>6. Trains for 20 epochs (this is the slowest practical — can take 5-10 minutes).</p>
+<p>7. Predicts test data, converts back to real prices, and plots actual vs predicted. The lines should closely follow each other.</p>
+</div>
+</div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span><button class="copy-btn" onclick="copyCode(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div><div class="code-content"><pre>import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from sklearn.preprocessing import MinMaxScaler
+import yfinance as yf
+
+stock_data = yf.download("AAPL", start="2015-01-01", end="2024-01-01")
+close_prices = stock_data[['Close']]
+
+print("Dataset shape:", close_prices.shape)
+print(close_prices.head())
+
+price_values = close_prices.values
+scaler = MinMaxScaler(feature_range=(0, 1))
+scaled_prices = scaler.fit_transform(price_values)
+
+def create_sequences(data, window_size):
+    sequence_features, sequence_targets = [], []
+    for i in range(len(data) - window_size):
+        sequence_features.append(data[i:i + window_size])
+        sequence_targets.append(data[i + window_size])
+    return np.array(sequence_features), np.array(sequence_targets)
+
+lookback_window = 30
+sequence_x, sequence_y = create_sequences(scaled_prices, lookback_window)
+
+split_index = int(0.8 * len(sequence_x))
+train_x, test_x = sequence_x[:split_index], sequence_x[split_index:]
+train_y, test_y = sequence_y[:split_index], sequence_y[split_index:]
+
+model = keras.Sequential([
+    layers.LSTM(50, return_sequences=True, input_shape=(lookback_window, 1)),
+    layers.LSTM(50),
+    layers.Dense(1)
+])
+
+model.compile(optimizer='adam', loss='mean_squared_error')
+model.summary()
+
+training_history = model.fit(
+    train_x, train_y,
+    epochs=20,
+    batch_size=32,
+    validation_data=(test_x, test_y)
+)
+
+predicted_scaled = model.predict(test_x)
+
+predicted_prices = scaler.inverse_transform(predicted_scaled)
+actual_prices = scaler.inverse_transform(test_y)
+
+plt.figure(figsize=(12, 6))
+plt.plot(actual_prices, label="Actual Price")
+plt.plot(predicted_prices, label="Predicted Price")
+plt.title("AAPL Stock Price Prediction using LSTM")
+plt.xlabel("Time")
+plt.ylabel("Stock Price")
+plt.legend()
+plt.show()</pre></div></div>
+</div>
+
+</main>
+<script>
+function switchPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0})}
+document.querySelectorAll('[data-goto]').forEach(r=>{r.addEventListener('click',()=>switchPage(r.dataset.goto))});
+function toggleAccordion(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+function copyCode(btn){const pre=btn.closest('.code-block').querySelector('pre');navigator.clipboard.writeText(pre.textContent).then(()=>{btn.classList.add('copied');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Copied!';setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy'},2000)})}
+function copyPip(btn,cmd){navigator.clipboard.writeText(cmd).then(()=>{btn.classList.add('copied');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Copied!';setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy'},2000)})}
+</script>
 </body>
 </html>
