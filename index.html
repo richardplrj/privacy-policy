@@ -163,41 +163,65 @@
     <div class="page">
         <div class="container">
             <h1 class="logo-heading">Privacy Policy for MyDay Astro</h1>
-            <p class="date">Last Updated: May 17, 2026</p>
+            <p class="date">Last Updated: June 24, 2026</p>
 
             <p class="intro">At <strong>MyDay Astro</strong>, we are committed to providing you with accurate astrological insights while protecting your personal data. This policy explains what our app collects and how we use it.</p>
 
             <h2>1. Information We Collect</h2>
             <p>To generate your astrology charts and manage your account, we collect the following:</p>
             <ul>
-                <li><strong>Google Authentication:</strong> We use Google Sign-In for secure access. We only collect your name and email address. <strong>We do not access or collect your Google profile picture.</strong></li>
-                <li><strong>Astrological Data:</strong> To create your personalized charts, we ask you to provide your <strong>Date of Birth, Time of Birth, and Place of Birth</strong>. This data is essential for the app's core functionality.</li>
+                <li><strong>Account Authentication:</strong> We use Google Sign-In or Apple Sign-In for secure access. We only collect your name and email address. If you choose Apple's "Hide My Email" option, we receive a private relay email address instead of your personal one. <strong>We do not access or collect your social media profile picture.</strong></li>
+                <li><strong>Astrological Data:</strong> To create your personalized charts and readings, we ask you to provide your <strong>Date of Birth, Time of Birth, Place of Birth, and gender</strong>. This data is essential for the app's core functionality.</li>
                 <li><strong>App Interaction Data:</strong> We store your saved readings, notification time preference, language preference, and in-app feedback (such as insight helpfulness ratings and accuracy ratings). This data is used to personalize your experience and improve the app.</li>
+                <li><strong>Usage and Diagnostic Data:</strong> We collect analytics about how the app is used (for example, which features and screens are opened) and basic diagnostic information about app performance. This helps us understand usage trends and fix problems.</li>
+                <li><strong>Technical and Device Information:</strong> To deliver notifications and keep the app working reliably, we store a notification (push) token for your device, along with your device type and the app version you are using.</li>
+                <li><strong>Advertising Identifier:</strong> With your permission, we collect your device's advertising identifier, which is used only to measure how well our app-promotion campaigns perform. You can decline or reset this at any time in your device settings.</li>
                 <li><strong>Feedback Data:</strong> If you use our optional "Feedback via WhatsApp" feature, we receive your phone number and message content voluntarily.</li>
             </ul>
 
             <h2>2. Device Permissions</h2>
             <p><strong>Notifications:</strong> Our app may send you daily insight notifications at a time of your choosing. Upon first use, we will ask for your permission to send these. You can opt out at any time through your device settings.</p>
+            <p><strong>Advertising and Tracking:</strong> With your permission, we and the Meta (Facebook) SDK may use your device's advertising identifier to measure how well our promotional campaigns perform. We ask for your consent before this is enabled, and you can decline or change this choice at any time in your device settings.</p>
 
             <h2>3. Data Storage and Security</h2>
-            <p><strong>Firebase Database:</strong> All your astrological data and profile information are stored securely in <strong>Google Firebase</strong>. This ensures your data is saved if you switch devices. We use industry-standard encryption provided by Firebase to ensure your data is safe.</p>
+            <p><strong>Firebase Database:</strong> All your astrological data and profile information are stored securely in <strong>Google Firebase</strong>. This ensures your data is saved if you switch devices. We use industry-standard safeguards, including encryption in transit (HTTPS/TLS) and encryption at rest provided by Firebase, together with access controls, to protect your data. While no method of storage or transmission is completely secure, we take reasonable measures to keep your information protected.</p>
 
             <h2>4. Third-Party Services</h2>
             <p>We integrate with the following services:</p>
             <ul>
-                <li><strong>Google Sign-In</strong> (Authentication)</li>
-                <li><strong>Firebase</strong> (Database, Cloud Messaging, and Cloud Functions)</li>
+                <li><strong>Google Sign-In and Apple Sign-In</strong> (Authentication)</li>
+                <li><strong>Firebase</strong> (Database, Cloud Messaging, Cloud Functions, and Analytics)</li>
+                <li><strong>OpenAI</strong> (AI text generation - to write your daily readings, we send your first name and the astrological data derived from your birth chart to OpenAI. We do not send your email, phone number, or exact date, time, or place of birth to OpenAI.)</li>
+                <li><strong>Astrology Calculation Service (VedicAstroAPI)</strong> (To calculate your birth chart and daily planetary transits, we send your birth details - date, time, and place of birth - to this third-party astrology calculation service.)</li>
                 <li><strong>Meta (Facebook) SDK</strong> (Ad attribution and install measurement - used to measure the performance of our app promotion campaigns. This SDK may collect your device's advertising identifier.)</li>
                 <li><strong>WhatsApp</strong> (Optional user-initiated support)</li>
             </ul>
 
             <h2>5. Data Retention and Deletion</h2>
+            <p>We keep your account and astrological data for as long as your account remains active, so the app can show your saved readings and history. When you delete your account, your profile and astrological data are permanently removed from our active database, and any residual copies in encrypted backups or service logs are deleted within 30 days.</p>
             <p>You can update or delete your birth details at any time within the app. You can permanently delete your account and all associated data at any time using the <strong>Delete account</strong> option in the app (Settings - My Account).</p>
             <p>If you cannot use the app but still want to delete your account, you can submit a request using our request form. You must use the same email address that you use to sign in to the app. Open the form here: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpoTW20CZkLQNFdXTvb9qmzJm8AGpeTASes3PiFQHbYiKtNg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">MyDay Astro - Account and Data Deletion Request</a>.</p>
             <p>For any other assistance, contact us at the address below.</p>
 
+            <h2>6. Children's Privacy</h2>
+            <p>MyDay Astro is intended for a general audience and is not directed at children. We do not knowingly collect personal data from children under the age of 18 without verifiable parental consent. If you believe a child has provided us with personal data, please contact us at the address below and we will delete it promptly.</p>
+
+            <h2>7. Your Rights and Choices</h2>
+            <p>We process your personal data on the basis of your consent (which you provide when you enter your birth details and use optional features) and to provide the core functionality of the app. You can withdraw your consent at any time by deleting your account.</p>
+            <p>Subject to applicable law (including the EU/UK GDPR and India's Digital Personal Data Protection Act, 2023), you have the right to access, correct, or delete your personal data, to request a copy of it, to withdraw consent, and to lodge a complaint with your local data protection authority. You can exercise most of these rights directly in the app, or by contacting us at the address below.</p>
+
+            <h2>8. International Data Transfers</h2>
+            <p>Some of the third-party services we use (including Firebase, OpenAI, and the Meta SDK) process and store data on servers located outside your country, including in the United States. By using the app, you understand that your data may be transferred to and processed in these locations, which may have different data protection laws. We rely on these providers' contractual and technical safeguards to protect your data during such transfers.</p>
+
+            <h2>9. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last Updated" date at the top of this page, notify you within the app where appropriate, and obtain your consent again where required by law. We encourage you to review this policy periodically.</p>
+
+            <h2>10. We Do Not Sell Your Data</h2>
+            <p>We do not sell your personal data to any third party, and we do not share it for cross-context behavioural advertising.</p>
+
             <div class="contact">
                 <strong>Contact Us</strong>
+                MyDay Astro is the data controller responsible for your personal data and is operated from India.<br>
                 Email: <a href="mailto:mydayastro@gmail.com">mydayastro@gmail.com</a>
             </div>
         </div>
